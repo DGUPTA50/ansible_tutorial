@@ -1,0 +1,10 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+
+  - name: Uinstalling tmux on all servers
+    yum:
+      name: tmux
+      state: absent

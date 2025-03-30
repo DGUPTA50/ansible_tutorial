@@ -1,0 +1,10 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+
+  - name: installing tmux on all servers
+    yum:
+      name: tmux
+      state: latest
