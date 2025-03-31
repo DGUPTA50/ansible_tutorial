@@ -1,0 +1,10 @@
+---
+
+- hosts: non_prod_servers
+  tasks:
+
+  - name: copying files to non-prod servers
+    unarchive:
+        src: https://the.earth.li/~sgtatham/putty/latest/putty-0.83.tar.gz
+        dest: /arch/putty
+        remote_src: yes

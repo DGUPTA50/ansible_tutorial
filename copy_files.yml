@@ -1,0 +1,17 @@
+---
+
+- hosts: non_prod_servers
+  tasks:
+
+  - name: copying files to non-prod servers
+    copy:
+      src: /home/oracle/bin  
+      dest: /arch
+
+- hosts: prod_servers
+  tasks:
+
+  - name: copying files to prod servers
+    copy:
+       src: /home/oracle/log
+       dest: /arch 

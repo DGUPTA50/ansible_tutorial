@@ -1,0 +1,11 @@
+---
+
+- hosts: all
+  tasks: 
+
+  - name:  change TS used percentage 
+    lineinfile:
+        path: /home/oracle/bin/tbs_check.sh
+        regexp: 'used_percent>95'
+        line: select tablespace_name ts,used_percent up from dba_tablespace_usage_metrics where TABLESPACE_NAME NOT IN('UNDOTBS1') AND  used_percent>98 order by 2; 
+

@@ -1,2 +1,5 @@
+[non_prod_servers]
 cabcvan1ora005
+
+[prod_servers]
 cabcvan1ora004
